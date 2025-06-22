@@ -1,0 +1,6 @@
+{
+  "context": "extend type Query {\n    topProducts(first: Int = 5): [Product]\n}\n\ntype Product @key(fields: \"upc\") {\n    upc: String!\n    \n    price: Int!\n}\n",
+  "expected": "name: String!",
+  "offset": 122,
+  "instruction": "Define un campo \"name\" que es de tipo String y es obligatorio."
+}

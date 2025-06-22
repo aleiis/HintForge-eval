@@ -1,0 +1,6 @@
+{
+  "context": "\n    body: String!\n    author: User! @provides(fields: \"username\")\n    product: Product!\n}\n\nextend type User @key(fields: \"id\") {\n    id: ID! @external\n    reviews: [Review]\n}\n\nextend type Product @key(fields: \"upc\") {\n    upc: String! @external\n    reviews: [Review]\n}\n",
+  "expected": "type Review {",
+  "offset": 0,
+  "instruction": "Define un tipo de dato llamado \"Review\" en GraphQL."
+}

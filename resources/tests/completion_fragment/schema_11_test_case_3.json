@@ -1,0 +1,6 @@
+{
+  "context": "# GraphQL schema example\n#\n# https://gqlgen.com/getting-started/\n\ntype Todo {\n  id: ID!\n  text: String!\n  done: Boolean!\n  user: User!\n}\n\ntype User {\n  id: ID!\n  name: String!\n}\n\ntype Query {\n  \n}\n\ninput NewTodo {\n  text: String!\n  userId: String!\n}\n\ninput NewUser {\n  name: String!\n  userId: String\n}\n\ntype Mutation {\n  createUser(input: NewUser!): User!\n  createTodo(input: NewTodo!): Todo!\n}\n",
+  "expected": "listTodos: [Todo!]!\n  getTodo(id: String!): Todo!\n  getUser(id: String!): User!",
+  "offset": 194,
+  "instruction": "El fragmento GraphQL define una lista de tareas (todos) y funciones para obtener una tarea específica y un usuario por su ID."
+}

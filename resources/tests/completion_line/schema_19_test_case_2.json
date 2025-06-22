@@ -1,0 +1,6 @@
+{
+  "context": "extend type Query {\n    \n}\n\ntype Product @key(fields: \"upc\") {\n    upc: String!\n    name: String!\n    price: Int!\n}\n",
+  "expected": "topProducts(first: Int = 5): [Product]",
+  "offset": 24,
+  "instruction": "Devuelve una lista de los primeros 5 productos."
+}

@@ -1,0 +1,6 @@
+{
+  "context": "extend type Query {\n    me: User\n}\n\ntype User @key(fields: \"id\") {\n    \n    username: String!\n}\n",
+  "expected": "id: ID!",
+  "offset": 71,
+  "instruction": "Define un campo obligatorio de tipo ID."
+}

@@ -1,0 +1,6 @@
+{
+    "kind": "attr_type",
+    "context": "type Review {\n    body: String!\n    author: User! @provides(fields: \"username\")\n    product: Product!\n}\n\nextend type User @key(fields: \"id\") {\n    id: ID! @external\n    reviews: [Review]\n}\n\nextend type Product @key(fields: \"upc\") {\n    upc:  @external\n    reviews: [Review]\n}\n",
+    "expected": "String!",
+    "offset": 241
+}

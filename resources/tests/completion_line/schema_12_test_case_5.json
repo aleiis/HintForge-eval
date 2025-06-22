@@ -1,0 +1,6 @@
+{
+  "context": "# GraphQL schema example\n#\n# https://gqlgen.com/getting-started/\n\nschema {\n  query: MyQuery\n}\n\ninterface Node {\n  id: ID!\n}\n\ntype Todo implements Node {\n  id: ID!\n  text: String!\n  state: State!\n}\n\ntype MyQuery {\n  \n}\n\nunion Data = Todo\n\nenum State {\n  NOT_YET\n  DONE\n}\n",
+  "expected": "todos: [Todo!]!",
+  "offset": 215,
+  "instruction": "Define un campo \"todos\" que es una lista no vacía de objetos \"Todo\"."
+}

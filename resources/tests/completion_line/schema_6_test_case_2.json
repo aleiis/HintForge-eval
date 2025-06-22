@@ -1,0 +1,6 @@
+{
+  "context": "type Query {\n    resolver: Resolver!\n}\n\ntype Resolver {\n    \n}\n",
+  "expected": "name: String!",
+  "offset": 60,
+  "instruction": "Define un campo llamado \"name\" que es de tipo String y es obligatorio."
+}

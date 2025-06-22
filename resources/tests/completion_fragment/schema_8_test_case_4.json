@@ -1,0 +1,6 @@
+{
+  "context": "type Hello @key(fields: \"name\") {\n  name: String!\n}\n\ntype World @key(fields: \"foo bar\") {\n  foo: String!\n  bar: Int!\n}\n\nextend type ExternalExtension @key(fields: \"upc\") {\n    upc: String! @external\n    reviews: [World]\n}\n\ntype Query {\n  \n}\n",
+  "expected": "hello: Hello!\n  world: World!",
+  "offset": 238,
+  "instruction": "El fragmento GraphQL define un objeto con dos campos: \"hello\" que devuelve \"Hello!\" y \"world\" que devuelve \"World!\"."
+}

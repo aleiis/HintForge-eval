@@ -1,0 +1,6 @@
+{
+  "context": "extend schema {\n  \n}\n\nextend type MyQuery {\n  todo(id: ID!): Todo\n}\n\ntype MyMutation {\n  createTodo(todo: TodoInput!): Todo!\n}\n\ninput TodoInput {\n  text: String!\n}\n",
+  "expected": "mutation: MyMutation",
+  "offset": 18,
+  "instruction": "Define una operación de mutación llamada \"MyMutation\"."
+}

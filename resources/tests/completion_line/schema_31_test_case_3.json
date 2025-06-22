@@ -1,0 +1,6 @@
+{
+  "context": "\"The `Upload` scalar type represents a multipart file upload.\"\nscalar Upload\n\n\"The `File` type, represents the response of uploading a file.\"\ntype File {\n    id: Int!\n    name: String!\n    content: String!\n    contentType: String!\n}\n\n\"The `UploadFile` type, represents the request for uploading a file with certain payload.\"\ninput UploadFile {\n    id: Int!\n    file: Upload!\n}\n\n\"The `Query` type, represents all of the entry points into our object graph.\"\ntype Query {\n    empty: String!\n}\n\n\"The `Mutation` type, represents all updates we can make to our data.\"\ntype Mutation {\n    \n    singleUploadWithPayload(req: UploadFile!): File!\n    multipleUpload(files: [Upload!]!): [File!]!\n    multipleUploadWithPayload(req: [UploadFile!]!): [File!]!\n}\n\n",
+  "expected": "singleUpload(file: Upload!): File!",
+  "offset": 582,
+  "instruction": "La línea define una mutación que permite subir un archivo y devuelve un objeto de tipo File."
+}

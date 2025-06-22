@@ -1,0 +1,6 @@
+{
+    "kind": "attr_name",
+    "context": "type Query {\n    resolver: Resolver!\n}\n\ntype Resolver {\n    : String!\n}\n",
+    "expected": "name",
+    "offset": 60
+}

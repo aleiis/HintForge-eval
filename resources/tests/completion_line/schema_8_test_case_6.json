@@ -1,0 +1,6 @@
+{
+  "context": "type Hello @key(fields: \"name\") {\n  name: String!\n}\n\ntype World @key(fields: \"foo bar\") {\n  foo: String!\n  bar: Int!\n}\n\nextend type ExternalExtension @key(fields: \"upc\") {\n    \n    reviews: [World]\n}\n\ntype Query {\n  hello: Hello!\n  world: World!\n}\n",
+  "expected": "upc: String! @external",
+  "offset": 176,
+  "instruction": "Define un campo `upc` de tipo `String` que es obligatorio y proviene de un servicio externo."
+}

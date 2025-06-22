@@ -1,0 +1,6 @@
+{
+  "context": "# GraphQL schema example\n#\n# https://gqlgen.com/getting-started/\n\nschema {\n  query: MyQuery\n}\n\ninterface Node {\n  id: ID!\n}\n\ntype Todo implements Node {\n  \n}\n\ntype MyQuery {\n  todos: [Todo!]!\n}\n\nunion Data = Todo\n\nenum State {\n  NOT_YET\n  DONE\n}\n",
+  "expected": "id: ID!\n  text: String!\n  state: State!",
+  "offset": 155,
+  "instruction": "El fragmento describe un objeto con un identificador, un texto y un estado, todos obligatorios."
+}

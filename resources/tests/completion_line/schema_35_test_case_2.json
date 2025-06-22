@@ -1,0 +1,6 @@
+{
+  "context": "extend schema {\n  mutation: MyMutation\n}\n\nextend type MyQuery {\n  todo(id: ID!): Todo\n}\n\ntype MyMutation {\n  \n}\n\ninput TodoInput {\n  text: String!\n}\n",
+  "expected": "createTodo(todo: TodoInput!): Todo!",
+  "offset": 109,
+  "instruction": "Crea una nueva tarea (todo) y devuelve el objeto de la tarea creada."
+}

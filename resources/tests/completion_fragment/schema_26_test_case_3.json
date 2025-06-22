@@ -1,0 +1,6 @@
+{
+  "context": "interface Event {\n    selection: [String!]\n    collected: [String!]\n}\n\ntype Post implements Event {\n    message: String!\n    sent: Time!\n    selection: [String!]\n    collected: [String!]\n}\n\ntype Like implements Event {\n    \n}\n\ntype Query {\n    events: [Event!]\n}\n\nscalar Time\n",
+  "expected": "reaction: String!\n    sent: Time!\n    selection: [String!]\n    collected: [String!]",
+  "offset": 223,
+  "instruction": "El fragmento describe un objeto que contiene una reacción como texto, una hora de envío, una lista de selecciones y una lista de elementos recolectados."
+}

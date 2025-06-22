@@ -1,0 +1,6 @@
+{
+  "context": "interface Event {\n    selection: [String!]\n    collected: [String!]\n}\n\ntype Post implements Event {\n    \n    sent: Time!\n    selection: [String!]\n    collected: [String!]\n}\n\ntype Like implements Event {\n    reaction: String!\n    sent: Time!\n    selection: [String!]\n    collected: [String!]\n}\n\ntype Query {\n    events: [Event!]\n}\n\nscalar Time\n",
+  "expected": "message: String!",
+  "offset": 104,
+  "instruction": "Define un campo llamado \"message\" que es de tipo String y es obligatorio."
+}

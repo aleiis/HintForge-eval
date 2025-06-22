@@ -1,0 +1,6 @@
+{
+  "context": "type Hello @key(fields: \"name\") {\n  name: String!\n}\n\ntype World @key(fields: \"foo bar\") {\n  \n}\n\nextend type ExternalExtension @key(fields: \"upc\") {\n    upc: String! @external\n    reviews: [World]\n}\n\ntype Query {\n  hello: Hello!\n  world: World!\n}\n",
+  "expected": "foo: String!\n  bar: Int!",
+  "offset": 92,
+  "instruction": "El fragmento describe un objeto con dos campos obligatorios: \"foo\" de tipo String y \"bar\" de tipo Int."
+}

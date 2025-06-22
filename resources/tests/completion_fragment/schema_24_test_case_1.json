@@ -1,0 +1,6 @@
+{
+  "context": "interface Event {\n    \n}\n\ntype Post implements Event {\n    message: String!\n    sent: Time!\n    selection: [String!]\n    collected: [String!]\n}\n\ntype Like implements Event {\n    reaction: String!\n    sent: Time!\n    selection: [String!]\n    collected: [String!]\n}\n\ntype Query {\n    events: [Event!]\n}\n\nscalar Time\n",
+  "expected": "selection: [String!]\n    collected: [String!]",
+  "offset": 22,
+  "instruction": "El fragmento describe dos listas: una de cadenas de texto que permite valores nulos y otra que solo acepta cadenas no nulas."
+}

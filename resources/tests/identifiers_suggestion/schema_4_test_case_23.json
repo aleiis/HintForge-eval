@@ -1,0 +1,6 @@
+{
+    "kind": "attr_type",
+    "context": "type Chatroom {\n    name: String!\n    messages: [Message!]!\n}\n\ntype Message {\n    id: ID!\n    text: String!\n    createdBy: String!\n    createdAt: Time!\n}\n\ntype Query {\n    room(name:String!): Chatroom\n}\n\ntype Mutation {\n    post(text: String!, username: , roomName: String!): Message!\n}\n\ntype Subscription {\n    messageAdded(roomName: String!): Message!\n}\n\nscalar Time\n\ndirective @user(username: String!) on SUBSCRIPTION\n",
+    "expected": "String!",
+    "offset": 254
+}

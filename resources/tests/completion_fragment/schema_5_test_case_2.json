@@ -1,0 +1,6 @@
+{
+  "context": "extend type Query {\n    me: User\n}\n\ntype User @key(fields: \"id\") {\n    \n}\n",
+  "expected": "id: ID!\n    username: String!",
+  "offset": 71,
+  "instruction": "El fragmento describe un tipo de dato que incluye un identificador único (ID) y un nombre de usuario (String), ambos obligatorios."
+}

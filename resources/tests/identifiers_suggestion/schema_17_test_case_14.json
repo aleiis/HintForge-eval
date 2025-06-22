@@ -1,0 +1,6 @@
+{
+    "kind": "attr_type",
+    "context": "type Query {\n    blogDetails (\n        blog_id: Int @doc(description: \"Search Docs List.\")\n    ): BlogDetails @resolver(class: \"Custom\\\\PracticeGraphql\\\\Model\\\\Resolver\\\\BlogDetails\") @doc(description: \"Return details about a Blog Details.\")\n}\ntype BlogDetails {\n    post_id: Int @doc(description: \"The ID of a Post page.\")\n    name: String @doc(description: \"The Post name.\")\n    url_key: String @doc(description: \"Url Key.\")\n    post_content: String @doc(description: \"Post Content\")\n    status:  @doc(description: \"Blog Status\")\n}\n",
+    "expected": "Int",
+    "offset": 498
+}

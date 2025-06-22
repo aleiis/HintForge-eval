@@ -1,0 +1,6 @@
+{
+    "kind": "attr_type",
+    "context": "type Query {\n    customers: [Customer!]\n\n    # these methods are here to test code generation of nested arrays\n    torture1d(customerIds: ): [Customer!]\n    torture2d(customerIds: [[Int!]]): [[Customer!]]\n}\n\ntype Customer {\n    id: Int!\n    name: String!\n    address: Address\n    orders: [Order!]\n}\n\ntype Address {\n    id: Int!\n    street: String!\n    country: String!\n}\n\ntype Order {\n    id: Int!\n    date: Time!\n    amount: Float!\n    items: [Item!]\n}\n\ntype Item {\n    name: String!\n}\nscalar Time\n",
+    "expected": "[Int!]",
+    "offset": 138
+}

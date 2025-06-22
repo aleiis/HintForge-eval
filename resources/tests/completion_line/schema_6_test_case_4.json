@@ -1,0 +1,6 @@
+{
+  "context": "type Query {\n    resolver: Resolver!\n}\n\n\n    name: String!\n}\n",
+  "expected": "type Resolver {",
+  "offset": 40,
+  "instruction": "Define un tipo de objeto llamado \"Resolver\" en GraphQL."
+}

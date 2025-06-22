@@ -1,0 +1,6 @@
+{
+  "context": "\n  mutation: MyMutation\n}\n\nextend type MyQuery {\n  todo(id: ID!): Todo\n}\n\ntype MyMutation {\n  createTodo(todo: TodoInput!): Todo!\n}\n\ninput TodoInput {\n  text: String!\n}\n",
+  "expected": "extend schema {",
+  "offset": 0,
+  "instruction": "Amplía el esquema existente en GraphQL."
+}

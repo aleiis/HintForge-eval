@@ -1,0 +1,6 @@
+{
+  "context": "type Review {\n    body: String!\n    author: User! @provides(fields: \"username\")\n    product: Product!\n}\n\nextend type User @key(fields: \"id\") {\n    \n    reviews: [Review]\n}\n\nextend type Product @key(fields: \"upc\") {\n    upc: String! @external\n    reviews: [Review]\n}\n",
+  "expected": "id: ID! @external",
+  "offset": 147,
+  "instruction": "Define un campo `id` de tipo `ID` que es obligatorio y se marca como externo."
+}

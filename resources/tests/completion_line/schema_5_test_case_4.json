@@ -1,0 +1,6 @@
+{
+  "context": "\n    me: User\n}\n\ntype User @key(fields: \"id\") {\n    id: ID!\n    username: String!\n}\n",
+  "expected": "extend type Query {",
+  "offset": 0,
+  "instruction": "Se amplía el tipo de consulta en GraphQL."
+}

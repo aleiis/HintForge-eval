@@ -1,0 +1,6 @@
+{
+    "kind": "attr_name",
+    "context": "type Link {\n    id: String!\n    url: String!\n    description: String!\n    postedBy: User\n    votes: [Vote!]!\n}\n\ntype User {\n    id: ID!\n    name: String!\n    email: String\n    password: String\n    : [Vote!]!\n}\n\ninput AuthData {\n  email: String!\n  password: String!\n}\n\ntype SigninPayload {\n  token: String\n  user: User\n}\n\ntype Vote {\n    id: ID!\n    createdAt: Time!\n    user: User!\n    link: Link!\n}\n\nscalar Time\n\ntype Query {\n    allLinks: [Link]\n}\n\ntype Mutation {\n    createUser(name: String!, authProvider: AuthData!): User\n    createLink(url: String!, description: String!): Link\n    signinUser(auth: AuthData): SigninPayload\n    createVote(linkId: ID, userId: ID): Vote\n}\n\nschema {\n    query: Query\n    mutation: Mutation\n}\n",
+    "expected": "votes",
+    "offset": 197
+}

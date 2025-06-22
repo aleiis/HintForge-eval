@@ -1,0 +1,6 @@
+{
+    "kind": "type",
+    "context": "type  {\n    resolver: Resolver!\n}\n\ntype Resolver {\n    name: String!\n}\n",
+    "expected": "Query",
+    "offset": 5
+}

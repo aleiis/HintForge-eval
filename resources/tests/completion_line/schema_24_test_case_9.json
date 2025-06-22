@@ -1,0 +1,6 @@
+{
+  "context": "interface Event {\n    selection: [String!]\n    collected: [String!]\n}\n\ntype Post implements Event {\n    message: String!\n    sent: Time!\n    selection: [String!]\n    collected: [String!]\n}\n\ntype Like implements Event {\n    reaction: String!\n    sent: Time!\n    selection: [String!]\n    \n}\n\ntype Query {\n    events: [Event!]\n}\n\nscalar Time\n",
+  "expected": "collected: [String!]",
+  "offset": 286,
+  "instruction": "Define un campo llamado \"collected\" que es una lista de cadenas de texto no nulas."
+}

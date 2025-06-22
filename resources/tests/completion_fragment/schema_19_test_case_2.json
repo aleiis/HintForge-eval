@@ -1,0 +1,6 @@
+{
+  "context": "extend type Query {\n    topProducts(first: Int = 5): [Product]\n}\n\ntype Product @key(fields: \"upc\") {\n    \n}\n",
+  "expected": "upc: String!\n    name: String!\n    price: Int!",
+  "offset": 105,
+  "instruction": "El fragmento describe un objeto con tres propiedades obligatorias: un código UPC, un nombre y un precio."
+}

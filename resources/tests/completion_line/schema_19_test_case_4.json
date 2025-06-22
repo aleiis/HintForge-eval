@@ -1,0 +1,6 @@
+{
+  "context": "\n    topProducts(first: Int = 5): [Product]\n}\n\ntype Product @key(fields: \"upc\") {\n    upc: String!\n    name: String!\n    price: Int!\n}\n",
+  "expected": "extend type Query {",
+  "offset": 0,
+  "instruction": "Se amplía el tipo de consulta en GraphQL."
+}

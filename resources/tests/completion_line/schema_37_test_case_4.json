@@ -1,0 +1,6 @@
+{
+  "context": "type Review {\n    body: String!\n    author: User! @provides(fields: \"username\")\n    product: Product!\n}\n\nextend type User @key(fields: \"id\") {\n    id: ID! @external\n    reviews: [Review]\n}\n\nextend type Product @key(fields: \"upc\") {\n    \n    reviews: [Review]\n}\n",
+  "expected": "upc: String! @external",
+  "offset": 236,
+  "instruction": "Define un campo `upc` de tipo `String` que es obligatorio y se marca como externo en GraphQL."
+}

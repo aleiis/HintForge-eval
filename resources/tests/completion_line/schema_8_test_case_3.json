@@ -1,0 +1,6 @@
+{
+  "context": "type Hello @key(fields: \"name\") {\n  name: String!\n}\n\ntype World @key(fields: \"foo bar\") {\n  foo: String!\n  bar: Int!\n}\n\nextend type ExternalExtension @key(fields: \"upc\") {\n    upc: String! @external\n    reviews: [World]\n}\n\ntype Query {\n  \n  world: World!\n}\n",
+  "expected": "hello: Hello!",
+  "offset": 238,
+  "instruction": "La línea de código define un campo llamado \"hello\" que devuelve el saludo \"Hello!\"."
+}

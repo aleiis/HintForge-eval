@@ -1,0 +1,6 @@
+{
+    "kind": "attr_type",
+    "context": "type Query {\n    user(id: ID!): User\n    search(input:  = {location: \"37,144\", isBanned: false}): [User!]!\n    userByTier(tier: Tier!, darkMode: DarkMode!): [User!]!\n}\n\ntype User {\n    id: ID!\n    name: String!\n    created: Timestamp\n    modified: Timestamp\n    valPrefs: DarkMode\n    ptrPrefs: DarkMode\n    isBanned: Banned!\n    primitiveResolver: String!\n    customResolver: Point!\n    address: Address\n    tier: Tier\n}\n\ntype Address {\n    id: ID!\n    location: Point\n}\n\ninput SearchArgs {\n    location: Point\n    createdAfter: Timestamp\n    isBanned: Banned # TODO: This can be a Boolean again once multiple backing types are allowed\n}\n\nenum Tier {\n    A\n    B\n    C\n}\n\nscalar Timestamp\nscalar Point\nscalar Banned\nscalar DarkMode\n",
+    "expected": "SearchArgs",
+    "offset": 55
+}

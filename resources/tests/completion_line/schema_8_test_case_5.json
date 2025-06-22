@@ -1,0 +1,6 @@
+{
+  "context": "type Hello @key(fields: \"name\") {\n  name: String!\n}\n\ntype World @key(fields: \"foo bar\") {\n  foo: String!\n  \n}\n\nextend type ExternalExtension @key(fields: \"upc\") {\n    upc: String! @external\n    reviews: [World]\n}\n\ntype Query {\n  hello: Hello!\n  world: World!\n}\n",
+  "expected": "bar: Int!",
+  "offset": 107,
+  "instruction": "Define un campo llamado \"bar\" que es de tipo entero y es obligatorio."
+}

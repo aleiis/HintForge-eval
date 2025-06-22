@@ -1,0 +1,6 @@
+{
+    "kind": "attr_name",
+    "context": "extend schema {\n  mutation: MyMutation\n}\n\nextend type MyQuery {\n  todo(id: ID!): Todo\n}\n\ntype MyMutation {\n  createTodo(: TodoInput!): Todo!\n}\n\ninput TodoInput {\n  text: String!\n}\n",
+    "expected": "todo",
+    "offset": 120
+}

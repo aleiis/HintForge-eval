@@ -1,0 +1,6 @@
+{
+  "context": "type Review {\n    body: String!\n    author: User! @provides(fields: \"username\")\n    \n}\n\nextend type User @key(fields: \"id\") {\n    id: ID! @external\n    reviews: [Review]\n}\n\nextend type Product @key(fields: \"upc\") {\n    upc: String! @external\n    reviews: [Review]\n}\n",
+  "expected": "product: Product!",
+  "offset": 84,
+  "instruction": "Define un campo llamado \"product\" que debe ser de tipo \"Product\" y no puede ser nulo."
+}

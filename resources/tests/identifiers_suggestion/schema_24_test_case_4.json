@@ -1,0 +1,6 @@
+{
+    "kind": "type",
+    "context": "interface Event {\n    selection: [String!]\n    collected: [String!]\n}\n\ntype Post implements Event {\n    message: String!\n    sent: Time!\n    selection: [String!]\n    collected: [String!]\n}\n\ntype  implements Event {\n    reaction: String!\n    sent: Time!\n    selection: [String!]\n    collected: [String!]\n}\n\ntype Query {\n    events: [Event!]\n}\n\nscalar Time\n",
+    "expected": "Like",
+    "offset": 195
+}

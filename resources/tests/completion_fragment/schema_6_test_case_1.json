@@ -1,0 +1,6 @@
+{
+  "context": "type Query {\n    \n}\n\ntype Resolver {\n    name: String!\n}\n",
+  "expected": "resolver: Resolver!",
+  "offset": 17,
+  "instruction": "El fragmento indica que \"resolver\" es un tipo de dato que no puede ser nulo en GraphQL."
+}

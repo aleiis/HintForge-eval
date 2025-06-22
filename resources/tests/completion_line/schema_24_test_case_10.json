@@ -1,0 +1,6 @@
+{
+  "context": "interface Event {\n    selection: [String!]\n    collected: [String!]\n}\n\ntype Post implements Event {\n    message: String!\n    sent: Time!\n    selection: [String!]\n    collected: [String!]\n}\n\ntype Like implements Event {\n    reaction: String!\n    \n    selection: [String!]\n    collected: [String!]\n}\n\ntype Query {\n    events: [Event!]\n}\n\nscalar Time\n",
+  "expected": "sent: Time!",
+  "offset": 245,
+  "instruction": "Define un campo llamado \"sent\" que debe contener un valor de tipo \"Time\" y no puede ser nulo."
+}

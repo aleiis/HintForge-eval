@@ -1,0 +1,6 @@
+{
+  "context": "type Chatroom {\n    name: String!\n    messages: [Message!]!\n}\n\ntype Message {\n    id: ID!\n    text: String!\n    createdBy: String!\n    createdAt: Time!\n}\n\ntype Query {\n    room(name:String!): Chatroom\n}\n\ntype Mutation {\n    \n}\n\ntype Subscription {\n    messageAdded(roomName: String!): Message!\n}\n\nscalar Time\n\ndirective @user(username: String!) on SUBSCRIPTION\n",
+  "expected": "post(text: String!, username: String!, roomName: String!): Message!",
+  "offset": 224,
+  "instruction": "Crea un nuevo mensaje con texto, nombre de usuario y nombre de sala obligatorios."
+}

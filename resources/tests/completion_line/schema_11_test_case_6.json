@@ -1,0 +1,6 @@
+{
+  "context": "# GraphQL schema example\n#\n# https://gqlgen.com/getting-started/\n\ntype Todo {\n  id: ID!\n  text: String!\n  done: Boolean!\n  user: User!\n}\n\ntype User {\n  id: ID!\n  name: String!\n}\n\ntype Query {\n  listTodos: [Todo!]!\n  getTodo(id: String!): Todo!\n  getUser(id: String!): User!\n}\n\ninput NewTodo {\n  text: String!\n  userId: String!\n}\n\ninput NewUser {\n  name: String!\n  userId: String\n}\n\n\n  createUser(input: NewUser!): User!\n  createTodo(input: NewTodo!): Todo!\n}\n",
+  "expected": "type Mutation {",
+  "offset": 382,
+  "instruction": "Define un tipo de operación para modificar datos en GraphQL."
+}

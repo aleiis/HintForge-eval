@@ -1,0 +1,6 @@
+{
+  "context": "# GraphQL schema example\n#\n# https://gqlgen.com/getting-started/\n\nschema {\n  query: MyQuery\n}\n\ninterface Node {\n  id: ID!\n}\n\n\n  id: ID!\n  text: String!\n  state: State!\n}\n\ntype MyQuery {\n  todos: [Todo!]!\n}\n\nunion Data = Todo\n\nenum State {\n  NOT_YET\n  DONE\n}\n",
+  "expected": "type Todo implements Node {",
+  "offset": 125,
+  "instruction": "Define un tipo de dato \"Todo\" que implementa la interfaz \"Node\" en GraphQL."
+}

@@ -1,0 +1,6 @@
+{
+  "context": "extend type Query {\n    \n}\n\ntype User @key(fields: \"id\") {\n    id: ID!\n    username: String!\n}\n",
+  "expected": "me: User",
+  "offset": 24,
+  "instruction": "Solicita la información del usuario actual."
+}

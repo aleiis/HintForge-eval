@@ -1,0 +1,6 @@
+{
+  "context": "extend schema {\n  mutation: MyMutation\n}\n\nextend type MyQuery {\n  todo(id: ID!): Todo\n}\n\ntype MyMutation {\n  createTodo(todo: TodoInput!): Todo!\n}\n\n\n  text: String!\n}\n",
+  "expected": "input TodoInput {",
+  "offset": 148,
+  "instruction": "Define un tipo de entrada llamado `TodoInput` en GraphQL."
+}

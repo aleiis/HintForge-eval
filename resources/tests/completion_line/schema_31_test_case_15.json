@@ -1,0 +1,6 @@
+{
+  "context": "\"The `Upload` scalar type represents a multipart file upload.\"\nscalar Upload\n\n\"The `File` type, represents the response of uploading a file.\"\ntype File {\n    id: Int!\n    name: String!\n    content: String!\n    contentType: String!\n}\n\n\"The `UploadFile` type, represents the request for uploading a file with certain payload.\"\ninput UploadFile {\n    id: Int!\n    file: Upload!\n}\n\n\"The `Query` type, represents all of the entry points into our object graph.\"\ntype Query {\n    empty: String!\n}\n\n\"The `Mutation` type, represents all updates we can make to our data.\"\ntype Mutation {\n    singleUpload(file: Upload!): File!\n    singleUploadWithPayload(req: UploadFile!): File!\n    \n    multipleUploadWithPayload(req: [UploadFile!]!): [File!]!\n}\n\n",
+  "expected": "multipleUpload(files: [Upload!]!): [File!]!",
+  "offset": 674,
+  "instruction": "La línea define una mutación de GraphQL para subir múltiples archivos, retornando una lista de archivos."
+}

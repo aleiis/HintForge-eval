@@ -1,0 +1,6 @@
+{
+  "context": "type Review {\n    body: String!\n    author: User! @provides(fields: \"username\")\n    product: Product!\n}\n\nextend type User @key(fields: \"id\") {\n    \n}\n\nextend type Product @key(fields: \"upc\") {\n    upc: String! @external\n    reviews: [Review]\n}\n",
+  "expected": "id: ID! @external\n    reviews: [Review]",
+  "offset": 147,
+  "instruction": "El fragmento define un campo \"reviews\" que es una lista de objetos \"Review\" y un identificador \"id\" que es obligatorio y externo."
+}

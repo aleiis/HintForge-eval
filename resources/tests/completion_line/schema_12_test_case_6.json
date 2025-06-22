@@ -1,0 +1,6 @@
+{
+  "context": "# GraphQL schema example\n#\n# https://gqlgen.com/getting-started/\n\nschema {\n  query: MyQuery\n}\n\ninterface Node {\n  id: ID!\n}\n\ntype Todo implements Node {\n  id: ID!\n  text: String!\n  state: State!\n}\n\ntype MyQuery {\n  todos: [Todo!]!\n}\n\nunion Data = Todo\n\nenum State {\n  \n  DONE\n}\n",
+  "expected": "NOT_YET",
+  "offset": 268,
+  "instruction": "`NOT_YET` indica que algo aún no está disponible o completado."
+}

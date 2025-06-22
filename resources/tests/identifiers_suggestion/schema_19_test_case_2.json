@@ -1,0 +1,6 @@
+{
+    "kind": "type",
+    "context": "extend type Query {\n    topProducts(first: Int = 5): [Product]\n}\n\ntype  @key(fields: \"upc\") {\n    upc: String!\n    name: String!\n    price: Int!\n}\n",
+    "expected": "Product",
+    "offset": 71
+}

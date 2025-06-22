@@ -1,0 +1,6 @@
+{
+  "context": "interface Event {\n    selection: [String!]\n    collected: [String!]\n}\n\ntype Post implements Event {\n    message: String!\n    sent: Time!\n    selection: [String!]\n    collected: [String!]\n}\n\ntype Like implements Event {\n    reaction: String!\n    sent: Time!\n    selection: [String!]\n    collected: [String!]\n}\n\n\n    events: [Event!]\n}\n\nscalar Time\n",
+  "expected": "type Query {",
+  "offset": 310,
+  "instruction": "Define un tipo de consulta en GraphQL."
+}

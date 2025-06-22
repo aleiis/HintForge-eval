@@ -1,0 +1,6 @@
+{
+    "kind": "type",
+    "context": "extend type Query {\n    me: User\n}\n\ntype  @key(fields: \"id\") {\n    id: ID!\n    username: String!\n}\n",
+    "expected": "User",
+    "offset": 41
+}

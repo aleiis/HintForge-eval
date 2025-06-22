@@ -1,0 +1,6 @@
+{
+  "context": "type Query {\n    \n}\n\ntype Customer {\n    id: Int!\n    name: String!\n    address: Address\n    orders: [Order!]\n}\n\ntype Address {\n    id: Int!\n    street: String!\n    country: String!\n}\n\ntype Order {\n    id: Int!\n    date: Time!\n    amount: Float!\n    items: [Item!]\n}\n\ntype Item {\n    name: String!\n}\nscalar Time\n",
+  "expected": "customers: [Customer!]\n\n    # these methods are here to test code generation of nested arrays\n    torture1d(customerIds: [Int!]): [Customer!]\n    torture2d(customerIds: [[Int!]]): [[Customer!]]",
+  "offset": 17,
+  "instruction": "El fragmento define un tipo de dato que incluye una lista de clientes y métodos para probar la generación de código con arrays anidados de identificadores de clientes."
+}

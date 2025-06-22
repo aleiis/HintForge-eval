@@ -1,0 +1,6 @@
+{
+  "context": "type Review {\n    \n}\n\nextend type User @key(fields: \"id\") {\n    id: ID! @external\n    reviews: [Review]\n}\n\nextend type Product @key(fields: \"upc\") {\n    upc: String! @external\n    reviews: [Review]\n}\n",
+  "expected": "body: String!\n    author: User! @provides(fields: \"username\")\n    product: Product!",
+  "offset": 18,
+  "instruction": "El fragmento describe un objeto que incluye un cuerpo de texto, un autor que proporciona el campo \"username\" y un producto asociado."
+}
